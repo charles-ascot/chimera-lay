@@ -13,7 +13,11 @@ class Settings(BaseSettings):
     
     # API
     api_prefix: str = "/api"
-    cors_origins: list[str] = ["http://localhost:3000", "https://*.pages.dev"]
+    cors_origins: list[str] = [
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://chimera-lay.pages.dev",
+    ]
     
     # Database
     database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/tumorra"
