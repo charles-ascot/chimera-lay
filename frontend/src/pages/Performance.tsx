@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  LineChart,
-  Line,
   AreaChart,
   Area,
   XAxis,
@@ -15,12 +13,11 @@ import {
 } from 'recharts';
 import {
   TrendingUp,
-  TrendingDown,
   Calendar,
   Target,
 } from 'lucide-react';
 import { Card, StatCard, Badge } from '../components/ui';
-import { cn, formatCurrency, formatPercent } from '../utils';
+import { cn, formatCurrency } from '../utils';
 
 const weeklyData = [
   { week: 'W1', pl: 2850, bets: 45, winRate: 68 },

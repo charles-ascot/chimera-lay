@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {
-  LineChart,
-  Line,
   AreaChart,
   Area,
   XAxis,
@@ -16,9 +14,7 @@ import {
   Cell,
 } from 'recharts';
 import {
-  FlaskConical,
   Play,
-  Calendar,
   TrendingUp,
   TrendingDown,
   Target,
@@ -26,7 +22,7 @@ import {
   Download,
   Settings,
 } from 'lucide-react';
-import { Card, Button, Input, Select, Badge, StatCard, Tabs } from '../components/ui';
+import { Card, Button, Input, StatCard, Tabs } from '../components/ui';
 import { cn, formatCurrency, formatPercent } from '../utils';
 import type { StrategyRules } from '../types';
 

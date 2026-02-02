@@ -3,13 +3,12 @@ import React, { useState } from 'react';
 import {
   ArrowUpRight,
   ArrowDownRight,
-  Activity,
   Filter,
   Download,
   Clock,
 } from 'lucide-react';
-import { Card, Button, Badge, Tabs, Input, Select } from '../components/ui';
-import { cn, formatCurrency, formatDate, formatTime } from '../utils';
+import { Card, Button, Badge, Tabs } from '../components/ui';
+import { cn, formatCurrency, formatDate } from '../utils';
 import type { Bet } from '../types';
 
 const mockBets: Partial<Bet>[] = [
@@ -153,14 +152,14 @@ export const Bets: React.FC = () => {
                   <p
                     className={cn(
                       'font-mono font-semibold',
-                      bet.profitLoss !== null
+                      bet.profitLoss != null
                         ? bet.profitLoss >= 0
                           ? 'text-profit'
                           : 'text-loss'
                         : 'text-pending'
                     )}
                   >
-                    {bet.profitLoss !== null ? formatCurrency(bet.profitLoss) : 'Pending'}
+                    {bet.profitLoss != null ? formatCurrency(bet.profitLoss) : 'Pending'}
                   </p>
                 </div>
                 <Badge

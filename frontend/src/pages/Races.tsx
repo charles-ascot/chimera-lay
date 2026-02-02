@@ -11,9 +11,9 @@ import {
   XCircle,
 } from 'lucide-react';
 import { Card, Button, Input, Select, Badge, Tabs } from '../components/ui';
-import { cn, formatOdds, formatGoing, formatRaceType } from '../utils';
+import { formatOdds, formatGoing, formatRaceType } from '../utils';
 import { useAppStore } from '../store';
-import type { QualifyingRace, RaceType, GoingCondition } from '../types';
+import type { QualifyingRace, RaceType } from '../types';
 
 // Mock qualifying races data
 const mockQualifyingRaces: QualifyingRace[] = [
@@ -214,7 +214,7 @@ const countryOptions = [
 export const Races: React.FC = () => {
   const [activeTab, setActiveTab] = useState('qualifying');
   const [searchQuery, setSearchQuery] = useState('');
-  const { filters, setFilters, bankroll } = useAppStore();
+  const { filters, setFilters } = useAppStore();
   
   const tabs = [
     { id: 'qualifying', label: 'Qualifying', count: mockQualifyingRaces.length },

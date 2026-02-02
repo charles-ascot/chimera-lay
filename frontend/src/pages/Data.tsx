@@ -35,7 +35,7 @@ export const Data: React.FC = () => {
     }
   }, []);
   
-  const handleFileUpload = async (file: File) => {
+  const handleFileUpload = async (_file: File) => {
     setUploadStatus('uploading');
     setUploadProgress(0);
     

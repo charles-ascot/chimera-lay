@@ -304,14 +304,14 @@ export const Dashboard: React.FC = () => {
                   <p
                     className={cn(
                       'font-mono font-semibold',
-                      bet.profitLoss !== null
+                      bet.profitLoss != null
                         ? bet.profitLoss >= 0
                           ? 'text-profit'
                           : 'text-loss'
                         : 'text-pending'
                     )}
                   >
-                    {bet.profitLoss !== null
+                    {bet.profitLoss != null
                       ? formatCurrency(bet.profitLoss)
                       : 'Pending'}
                   </p>
